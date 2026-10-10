@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JUNK飯 | Joy-Con修理・ゲーム機の買取販売</title>
+<meta name="description" content="Nintendo Switch Joy-Conのスティック交換・ボタン修理を郵送で承ります。スティック交換 片側2,000円〜。中古ゲーム機の買取・販売も準備中です。">
+<meta property="og:title" content="JUNK飯 | Joy-Con修理・ゲーム機の買取販売">
+<meta property="og:description" content="Joy-Conのドリフト修理を郵送で。スティック交換 片側2,000円〜、保証30日。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://repair.shtoa-36.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3ede1;
+  --paper-2:#e9e0cf;
+  --ink:#1f1d1a;
+  --ink-2:#5b554c;
+  --line:#cfc4b0;
+  --tag:#e8541e;
+  --tag-ink:#ffffff;
+  --ok:#2f7d4f;
+  --card:#fbf8f2;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1b1a18; --paper-2:#24221f; --ink:#f1ebe0; --ink-2:#b5ac9e;
+    --line:#3a3631; --tag:#ff6a33; --card:#22201d; --ok:#5cc187;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1b1a18; --paper-2:#24221f; --ink:#f1ebe0; --ink-2:#b5ac9e;
+  --line:#3a3631; --tag:#ff6a33; --card:#22201d; --ok:#5cc187;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+  line-height:1.8;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+.dot{font-family:"DotGothic16",monospace;letter-spacing:.04em}
+
+/* header */
+header.top{border-bottom:2px solid var(--ink);background:var(--paper)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:900;font-size:22px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span.sub{font-size:11px;font-weight:700;color:var(--ink-2)}
+nav.links{display:flex;gap:18px;font-size:14px;font-weight:700}
+nav.links a{text-decoration:none}
+nav.links a:hover{color:var(--tag)}
+@media (max-width:640px){nav.links{display:none}}
+
+/* hero */
+.hero{padding:56px 0 48px;border-bottom:2px solid var(--ink);
+  background-image:repeating-linear-gradient(0deg,transparent 0 31px,var(--line) 31px 32px);}
+.hero .eyebrow{display:inline-block;background:var(--ink);color:var(--paper);padding:2px 10px;font-size:13px}
+.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.25;margin:16px 0 12px;font-weight:900}
+.hero h1 em{font-style:normal;background:var(--tag);color:var(--tag-ink);padding:0 .15em}
+.hero p.lead{font-size:17px;color:var(--ink-2);max-width:34em;margin:0 0 24px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border:2px solid var(--ink);font-weight:700;text-decoration:none;background:var(--card);box-shadow:4px 4px 0 var(--ink);transition:transform .1s, box-shadow .1s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn.primary{background:var(--tag);color:var(--tag-ink)}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:28px;font-size:14px;font-weight:700}
+.hero .facts span::before{content:"■ ";color:var(--tag)}
+
+/* sections */
+section{padding:56px 0;border-bottom:1px dashed var(--line)}
+section h2{font-size:26px;margin:0 0 6px;font-weight:900;display:flex;align-items:baseline;gap:12px}
+section h2 .num{font-size:14px;color:var(--tag)}
+section .sub{color:var(--ink-2);margin:0 0 28px}
+
+/* price tags */
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.price{position:relative;background:var(--card);border:2px solid var(--ink);padding:20px 18px 16px}
+.price::before{content:"";position:absolute;top:12px;right:12px;width:10px;height:10px;border-radius:50%;border:2px solid var(--ink);background:var(--paper)}
+.price h3{margin:0 0 4px;font-size:16px;padding-right:20px}
+.price .yen{font-size:32px;font-weight:900;line-height:1.2}
+.price .yen small{font-size:15px;font-weight:700}
+.price .note{font-size:13px;color:var(--ink-2);margin-top:6px}
+.price.best{background:var(--tag);color:var(--tag-ink);border-color:var(--ink)}
+.price.best .note{color:var(--tag-ink);opacity:.9}
+.terms{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1.5px solid var(--ink);padding:4px 12px;font-size:14px;font-weight:700;background:var(--paper-2)}
+
+/* flow */
+ol.flow{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:f}
+ol.flow li{counter-increment:f;display:grid;grid-template-columns:56px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+ol.flow li:last-child{border-bottom:1px solid var(--line)}
+ol.flow li::before{content:counter(f,decimal-leading-zero);font-family:"DotGothic16",monospace;font-size:28px;color:var(--tag);line-height:1.2}
+ol.flow h3{margin:0;font-size:17px}
+ol.flow p{margin:2px 0 0;color:var(--ink-2);font-size:15px}
+
+/* scope */
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.scope{grid-template-columns:1fr}}
+.box{background:var(--card);border:2px solid var(--ink);padding:18px 20px}
+.box h3{margin:0 0 8px;font-size:16px}
+.box ul{margin:0;padding-left:1.2em}
+.box.ng h3{color:var(--ink-2)}
+
+/* buy-sell */
+.soon{border:2px dashed var(--ink);padding:28px 24px;background:var(--paper-2);position:relative}
+.soon .stamp{position:absolute;top:-14px;left:20px;background:var(--ink);color:var(--paper);padding:2px 12px;font-size:13px}
+.soon h3{margin:6px 0 8px;font-size:20px}
+.soon p{margin:0 0 8px;color:var(--ink-2)}
+
+/* faq */
+details{border-top:1px solid var(--line);padding:14px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;gap:10px}
+summary::before{content:"Q.";color:var(--tag);font-family:"DotGothic16",monospace}
+summary::-webkit-details-marker{display:none}
+details p{margin:8px 0 0 30px;color:var(--ink-2)}
+
+/* disclaimer */
+.disclaimer{font-size:14px;color:var(--ink-2)}
+.disclaimer h3{color:var(--ink);font-size:15px;margin:18px 0 4px}
+.disclaimer ul{margin:0;padding-left:1.2em}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper);border-bottom:none}
+.contact .sub{color:var(--paper);opacity:.75}
+.contact .btn{color:var(--ink)}
+.contact .btn.primary{color:var(--tag-ink)}
+.contact .btn{box-shadow:4px 4px 0 var(--tag)}
+.contact ul{opacity:.85;font-size:14px;padding-left:1.2em}
+
+/* footer */
+footer{padding:28px 0 40px;font-size:13px;color:var(--ink-2)}
+footer table{border-collapse:collapse;margin:8px 0 16px;width:100%;max-width:560px}
+footer th,footer td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+footer th{white-space:nowrap;width:9em;font-weight:700;color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><span>JUNK飯</span><span class="sub">ジャンクめし</span></a>
+    <nav class="links">
+      <a href="#price">料金</a>
+      <a href="#flow">ご依頼の流れ</a>
+      <a href="#buysell">買取・販売</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow dot">JOY-CON REPAIR / BY MAIL</span>
+    <h1>勝手に動くJoy-Con、<br><em>2,000円</em>で直します。</h1>
+    <p class="lead">Nintendo Switch Joy-Conのスティックドリフト・ボタン反応不良を、郵送で修理します。YouTubeチャンネル「ジャンくん」で修理の様子も発信している、個人の修理代行です。</p>
+    <div class="btns">
+      <a class="btn primary" href="#contact">修理を相談する</a>
+      <a class="btn" href="#price">料金を見る</a>
+    </div>
+    <div class="facts">
+      <span>全国郵送対応</span>
+      <span>納期 中3〜5日</span>
+      <span>30日間の再発保証</span>
+      <span>修理不可なら診断料500円のみ</span>
+    </div>
+  </div>
+</div>
+
+<section id="price">
+  <div class="wrap">
+    <h2><span class="num dot">01</span>修理料金</h2>
+    <p class="sub">Joy-Con専用の料金です。表示はすべて税込・部品代込み。往復の送料は別途ご負担ください。</p>
+    <div class="prices">
+      <div class="price">
+        <h3>スティック交換（片側）</h3>
+        <div class="yen">2,000<small>円</small></div>
+        <div class="note">L または R のドリフト修理</div>
+      </div>
+      <div class="price best">
+        <h3>スティック交換（L+R）</h3>
+        <div class="yen">3,500<small>円</small></div>
+        <div class="note">両側セットで500円お得</div>
+      </div>
+      <div class="price">
+        <h3>ボタン反応不良の修理</h3>
+        <div class="yen">1,500<small>円〜</small></div>
+        <div class="note">症状により変動・要診断</div>
+      </div>
+      <div class="price">
+        <h3>診断のみ</h3>
+        <div class="yen">500<small>円</small></div>
+        <div class="note">修理成立時は代金に充当</div>
+      </div>
+    </div>
+    <div class="terms">
+      <span class="chip">納期目安：到着から中3〜5日</span>
+      <span class="chip">保証：返送日から30日（同一箇所の再発）</span>
+      <span class="chip">お支払い：先払い（銀行振込）</span>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <h2><span class="num dot">02</span>ご依頼の流れ</h2>
+    <p class="sub">お問い合わせから返送まで、すべて郵送とメッセージで完結します。</p>
+    <ol class="flow">
+      <li><div><h3>お問い合わせ</h3><p>機種（Joy-Con L / R）と症状をお知らせください。動画や写真があると診断がスムーズです。</p></div></li>
+      <li><div><h3>お見積り・送付先のご案内</h3><p>料金の目安と送付先をご案内します。免責事項をご確認のうえ、お申し込みください。</p></div></li>
+      <li><div><h3>Joy-Conを発送</h3><p>追跡番号・補償付きの方法（ゆうパック、レターパックプラス等）をおすすめします。発送前に外装の写真を撮っておいてください。</p></div></li>
+      <li><div><h3>診断・お支払い</h3><p>到着後に診断し、修理内容と料金を確定してご連絡します。お振込みを確認してから作業に入ります。</p></div></li>
+      <li><div><h3>修理・動作確認・返送</h3><p>修理後に動作確認を行い、追跡番号付きで返送します。返送日から30日間の保証付きです。</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="scope">
+  <div class="wrap">
+    <h2><span class="num dot">03</span>対応できること</h2>
+    <p class="sub">現在はJoy-Conを中心に、確実に直せる範囲に絞って承っています。</p>
+    <div class="scope">
+      <div class="box">
+        <h3>対応しています</h3>
+        <ul>
+          <li>Joy-Conのスティックドリフト（勝手に動く）</li>
+          <li>Joy-Conのボタン反応不良</li>
+          <li>Switch本体のスティック・ボタンまわりのご相談</li>
+        </ul>
+      </div>
+      <div class="box ng">
+        <h3>対応していません</h3>
+        <ul>
+          <li>基板の修理・電源IC関連の故障</li>
+          <li>水没品</li>
+          <li>データ移行・データ復旧</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="buysell">
+  <div class="wrap">
+    <h2><span class="num dot">04</span>買取・販売</h2>
+    <p class="sub">壊れたゲーム機やコントローラーを買い取り、直して次の方へお届けします。</p>
+    <div class="soon">
+      <span class="stamp dot">COMING SOON</span>
+      <h3>ただいま準備中です</h3>
+      <p>中古品の買取・販売は、古物商許可の取得後に開始します。開始時期はこのページとYouTubeチャンネル「ジャンくん」でお知らせします。</p>
+      <p>「動かなくなったJoy-Conを手放したい」などのご相談は、修理のお問い合わせと同じ窓口から先にお寄せいただいてかまいません（現時点では買取のお約束はできません）。</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2><span class="num dot">05</span>よくある質問</h2>
+    <p class="sub">&nbsp;</p>
+    <details><summary>メーカー保証はどうなりますか？</summary><p>当店で分解・修理した時点で、任天堂のメーカー保証は受けられなくなります。保証期間内の場合は、先にメーカー修理をご検討ください。</p></details>
+    <details><summary>修理できなかった場合の費用は？</summary><p>診断料500円のみのご請求です。その場合の返送料はご依頼者様のご負担となります。</p></details>
+    <details><summary>直したところがまた壊れたら？</summary><p>返送日から30日以内に同じ箇所が再発した場合は、無償で再修理します。</p></details>
+    <details><summary>Switch本体ごと送ってもいいですか？</summary><p>可能ですが、セーブデータやアカウントに関するトラブルは責任を負いかねます。必要なデータのバックアップをお願いします。Joy-Conのみの修理であれば、本体を送る必要はありません。</p></details>
+    <details><summary>未成年でも依頼できますか？</summary><p>保護者様のご同意のうえ、保護者様のお名前でお申し込みください。</p></details>
+    <details><summary>修理の様子は動画になりますか？</summary><p>ご同意いただいた場合のみ、YouTubeチャンネル「ジャンくん」で修理の様子を紹介することがあります。個人が特定される表示にはモザイク等の配慮をします。同意しない場合も修理は通常どおり承ります。</p></details>
+  </div>
+</section>
+
+<section id="disclaimer">
+  <div class="wrap disclaimer">
+    <h2><span class="num dot">06</span>免責事項</h2>
+    <p class="sub">お申し込みの前に必ずご確認ください。</p>
+    <h3>基本方針</h3>
+    <ul>
+      <li>本サービスは個人による修理代行です。分解によりメーカー保証は失われます。</li>
+    </ul>
+    <h3>配送について</h3>
+    <ul>
+      <li>配送中の破損・紛失は運送会社の補償範囲内での対応となり、当方では責任を負いかねます。</li>
+      <li>追跡番号・補償付きの配送方法をおすすめします。</li>
+    </ul>
+    <h3>お支払いについて</h3>
+    <ul>
+      <li>診断・修理内容の確定後、作業前に代金をお振込みいただきます（先払い制）。</li>
+      <li>修理不可と判明した時点でキャンセルできます。その場合の返送料はご依頼者様のご負担です。</li>
+    </ul>
+    <h3>その他</h3>
+    <ul>
+      <li>分解後に別の不具合が見つかった場合は、ご連絡のうえ追加対応の可否・料金をご相談します。</li>
+      <li>経年劣化により、作業中に部品が破損する可能性がわずかにあります。その場合は事前にご連絡し、可能な範囲で代替対応をご案内します。</li>
+      <li>お預かり品は写真記録を行ったうえで作業します。</li>
+      <li>保証期間中の再発以外の返金・補償には応じられません。</li>
+      <li>お預かりした個人情報は、本サービスの連絡目的以外には使用しません。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2><span class="num dot">07</span>お問い合わせ</h2>
+    <p class="sub">修理のご相談・お見積りはメールで受け付けています。通常24時間以内にお返事します。</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:repair@shtoa-36.com?subject=%E3%80%90JUNK%E9%A3%AF%E3%80%91%E4%BF%AE%E7%90%86%E3%81%AE%E7%9B%B8%E8%AB%87&body=%E2%96%A0%E6%A9%9F%E7%A8%AE%EF%BC%88Joy-Con%20L%20%2F%20R%20%E3%81%AA%E3%81%A9%EF%BC%89%EF%BC%9A%0A%E2%96%A0%E7%97%87%E7%8A%B6%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E4%BD%8F%E3%81%BE%E3%81%84%E3%81%AE%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C%EF%BC%9A%0A">メールで相談する</a>
+      <a class="btn" href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube「ジャンくん」</a>
+    </div>
+    <ul>
+      <li>メールには「機種」「症状」「お住まいの都道府県」をお書き添えください。</li>
+      <li>症状が分かる動画・写真があると、より正確にお見積りできます。</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>事業者情報</strong>
+    <table>
+      <tr><th>屋号</th><td>JUNK飯</td></tr>
+      <tr><th>運営責任者</th><td>【氏名を記入】</td></tr>
+      <tr><th>所在地・電話番号</th><td>ご請求があれば遅滞なく開示します</td></tr>
+      <tr><th>メール</th><td>repair@shtoa-36.com</td></tr>
+      <tr><th>古物商許可</th><td>申請中（許可取得後、公安委員会名・許可番号をここに掲載します）</td></tr>
+    </table>
+    <p>&copy; 2026 JUNK飯</p>
+  </div>
+</footer>
+
+</body>
+</html>
