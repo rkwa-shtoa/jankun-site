@@ -187,11 +187,17 @@ button.btn[disabled]{opacity:.6;cursor:wait}
 <main>
 <div class="formwrap">
   <div class="wrap">
+    <!-- 受付を一時停止するときは、下の行の data-paused の値を 1 にする（再開は 0） -->
+    <div id="paused" data-paused="0" class="note-box" style="display:none">
+      <p><strong>ただいま、譲り受けの受付を一時停止しております。</strong></p>
+      <p>お預かりしている品物の修理が進みしだい、再開いたします。再開はYouTubeチャンネル「ジーヤンク」やXでお知らせします。</p>
+    </div>
     <div id="intro">
       <h1>譲り受けフォーム</h1>
       <p class="lead">必要事項を入力して送信してください。</p>
       <div class="note-box">
         <p>捨てる予定のゲーム機・コントローラー・スマホ・PCを、無料でお譲りいただける方を募集しています。</p>
+        <p>お一人様<strong>3台まで</strong>とさせていただいております。</p>
         <p>送料は送っていただく方のご負担となります（元払い）。返送はありません。バッテリーが膨らんでいるものは、発火の危険があるため送らないでください。</p>
         <p>送信すると、この画面に送付先が表示されます。</p>
       </div>
@@ -211,6 +217,7 @@ button.btn[disabled]{opacity:.6;cursor:wait}
       </div>
       <div class="field" data-name="items">
         <label for="items">機種・台数<span class="req">必須</span></label>
+        <p class="help">お一人様3台までです。</p>
         <input type="text" id="items" name="items" required placeholder="例：Switch本体 1台、iPhone 8 1台、ノートPC 1台">
         <p class="err">入力してください</p>
       </div>
@@ -275,6 +282,14 @@ button.btn[disabled]{opacity:.6;cursor:wait}
 </footer>
 
 <script>
+(function(){
+  var pz = document.getElementById('paused');
+  if (pz.getAttribute('data-paused') === '1'){
+    pz.style.display = 'block';
+    document.getElementById('intro').style.display = 'none';
+    document.getElementById('f').style.display = 'none';
+  }
+})();
 (function(){
   var form = document.getElementById('f');
   var ACTION = form.getAttribute('data-action');
