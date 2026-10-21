@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>譲り受けフォーム | ジーヤンク</title>
+<meta name="description" content="使わなくなったゲーム機・スマホ・PCを無料でお譲りいただくためのフォームです。">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3ede1;
+  --paper-2:#e9e0cf;
+  --ink:#1f1d1a;
+  --ink-2:#5b554c;
+  --line:#cfc4b0;
+  --tag:#e8541e;
+  --tag-ink:#ffffff;
+  --ok:#2f7d4f;
+  --card:#fbf8f2;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1b1a18; --paper-2:#24221f; --ink:#f1ebe0; --ink-2:#b5ac9e;
+    --line:#3a3631; --tag:#ff6a33; --card:#22201d; --ok:#5cc187;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1b1a18; --paper-2:#24221f; --ink:#f1ebe0; --ink-2:#b5ac9e;
+  --line:#3a3631; --tag:#ff6a33; --card:#22201d; --ok:#5cc187;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+  line-height:1.8;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+.dot{font-family:"DotGothic16",monospace;letter-spacing:.04em}
+
+/* header */
+header.top{border-bottom:2px solid var(--ink);background:var(--paper)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:900;font-size:22px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span.sub{font-size:11px;font-weight:700;color:var(--ink-2)}
+nav.links{display:flex;gap:18px;font-size:14px;font-weight:700}
+nav.links a{text-decoration:none}
+nav.links a:hover{color:var(--tag)}
+@media (max-width:640px){nav.links{display:none}}
+
+/* hero */
+.hero{padding:56px 0 48px;border-bottom:2px solid var(--ink);
+  background-image:repeating-linear-gradient(0deg,transparent 0 31px,var(--line) 31px 32px);}
+.hero .eyebrow{display:inline-block;background:var(--ink);color:var(--paper);padding:2px 10px;font-size:13px}
+.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.25;margin:16px 0 12px;font-weight:900}
+.hero h1 em{font-style:normal;background:var(--tag);color:var(--tag-ink);padding:0 .15em}
+.hero p.lead{font-size:17px;color:var(--ink-2);max-width:34em;margin:0 0 24px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border:2px solid var(--ink);font-weight:700;text-decoration:none;background:var(--card);box-shadow:4px 4px 0 var(--ink);transition:transform .1s, box-shadow .1s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn.primary{background:var(--tag);color:var(--tag-ink)}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:28px;font-size:14px;font-weight:700}
+.hero .facts span::before{content:"■ ";color:var(--tag)}
+
+/* sections */
+section{padding:56px 0;border-bottom:1px dashed var(--line)}
+section h2{font-size:26px;margin:0 0 6px;font-weight:900;display:flex;align-items:baseline;gap:12px}
+section h2 .num{font-size:14px;color:var(--tag)}
+section .sub{color:var(--ink-2);margin:0 0 28px}
+
+/* price tags */
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.price{position:relative;background:var(--card);border:2px solid var(--ink);padding:20px 18px 16px}
+.price::before{content:"";position:absolute;top:12px;right:12px;width:10px;height:10px;border-radius:50%;border:2px solid var(--ink);background:var(--paper)}
+.price h3{margin:0 0 4px;font-size:16px;padding-right:20px}
+.price .yen{font-size:32px;font-weight:900;line-height:1.2}
+.price .yen small{font-size:15px;font-weight:700}
+.price .note{font-size:13px;color:var(--ink-2);margin-top:6px}
+.price.best{background:var(--tag);color:var(--tag-ink);border-color:var(--ink)}
+.price.best .note{color:var(--tag-ink);opacity:.9}
+.terms{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1.5px solid var(--ink);padding:4px 12px;font-size:14px;font-weight:700;background:var(--paper-2)}
+
+/* flow */
+ol.flow{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:f}
+ol.flow li{counter-increment:f;display:grid;grid-template-columns:56px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+ol.flow li:last-child{border-bottom:1px solid var(--line)}
+ol.flow li::before{content:counter(f,decimal-leading-zero);font-family:"DotGothic16",monospace;font-size:28px;color:var(--tag);line-height:1.2}
+ol.flow h3{margin:0;font-size:17px}
+ol.flow p{margin:2px 0 0;color:var(--ink-2);font-size:15px}
+
+/* scope */
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.scope{grid-template-columns:1fr}}
+.box{background:var(--card);border:2px solid var(--ink);padding:18px 20px}
+.box h3{margin:0 0 8px;font-size:16px}
+.box ul{margin:0;padding-left:1.2em}
+.box.ng h3{color:var(--ink-2)}
+
+/* buy-sell */
+.soon{border:2px dashed var(--ink);padding:28px 24px;background:var(--paper-2);position:relative}
+.soon .stamp{position:absolute;top:-14px;left:20px;background:var(--ink);color:var(--paper);padding:2px 12px;font-size:13px}
+.soon h3{margin:6px 0 8px;font-size:20px}
+.soon p{margin:0 0 8px;color:var(--ink-2)}
+
+/* faq */
+details{border-top:1px solid var(--line);padding:14px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;gap:10px}
+summary::before{content:"Q.";color:var(--tag);font-family:"DotGothic16",monospace}
+summary::-webkit-details-marker{display:none}
+details p{margin:8px 0 0 30px;color:var(--ink-2)}
+
+/* disclaimer */
+.disclaimer{font-size:14px;color:var(--ink-2)}
+.disclaimer h3{color:var(--ink);font-size:15px;margin:18px 0 4px}
+.disclaimer ul{margin:0;padding-left:1.2em}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper);border-bottom:none}
+.contact .sub{color:var(--paper);opacity:.75}
+.contact .btn{color:var(--ink)}
+.contact .btn.primary{color:var(--tag-ink)}
+.contact .btn{box-shadow:4px 4px 0 var(--tag)}
+.contact ul{opacity:.85;font-size:14px;padding-left:1.2em}
+
+/* footer */
+footer{padding:28px 0 40px;font-size:13px;color:var(--ink-2)}
+footer table{border-collapse:collapse;margin:8px 0 16px;width:100%;max-width:560px}
+footer th,footer td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+footer th{white-space:nowrap;width:9em;font-weight:700;color:var(--ink)}
+</style>
+
+<style>
+.formwrap{padding:48px 0 64px}
+.formwrap h1{font-size:clamp(26px,5vw,36px);font-weight:900;margin:0 0 8px}
+.formwrap .lead{color:var(--ink-2);margin:0 0 28px}
+.note-box{background:var(--paper-2);border:2px dashed var(--ink);padding:14px 18px;margin:0 0 28px;font-size:15px}
+.note-box p{margin:0 0 6px}
+.note-box p:last-child{margin:0}
+form.f{display:grid;gap:22px;max-width:640px}
+.field{display:grid;gap:6px}
+.field>label,.field>.lbl{font-weight:700}
+.req{display:inline-block;background:var(--tag);color:var(--tag-ink);font-size:11px;padding:0 6px;margin-left:6px;vertical-align:2px}
+.opt{display:inline-block;background:var(--line);color:var(--ink);font-size:11px;padding:0 6px;margin-left:6px;vertical-align:2px}
+.help{font-size:13px;color:var(--ink-2);margin:0}
+input[type=text],input[type=email],textarea{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--ink);padding:10px 12px;width:100%;border-radius:0}
+textarea{min-height:140px;resize:vertical}
+input:focus,textarea:focus{outline:3px solid var(--tag);outline-offset:1px}
+.choices{display:grid;gap:8px}
+.choices label{display:flex;gap:10px;align-items:flex-start;font-weight:400;cursor:pointer;background:var(--card);border:1.5px solid var(--line);padding:10px 12px}
+.choices input{margin-top:6px;accent-color:var(--tag);width:18px;height:18px;flex:none}
+.err{color:#c62828;font-size:13px;margin:0;display:none}
+.field.bad .err{display:block}
+.field.bad input[type=text],.field.bad input[type=email],.field.bad textarea{border-color:#c62828}
+button.btn{font:inherit;cursor:pointer;color:var(--tag-ink)}
+button.btn[disabled]{opacity:.6;cursor:wait}
+.done{display:none;max-width:640px}
+.done.show{display:block}
+.addr{background:var(--card);border:2px solid var(--ink);padding:16px 20px;margin:14px 0}
+.addr h3{margin:0 0 6px;font-size:16px}
+.addr p{margin:0;line-height:1.7}
+.sendfail{display:none;border:2px solid #c62828;padding:12px 16px;margin-top:8px}
+.sendfail.show{display:block}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="./"><span>ジーヤンク</span><span class="sub">36-JUNK</span></a>
+    <nav class="links">
+      <a href="./#price">料金</a>
+      <a href="./#flow">ご依頼の流れ</a>
+      <a href="./#donate">譲ってください</a>
+      <a href="./#faq">よくある質問</a>
+      <a href="./#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="formwrap">
+  <div class="wrap">
+    <div id="intro">
+      <h1>譲り受けフォーム</h1>
+      <p class="lead">必要事項を入力して送信してください。</p>
+      <div class="note-box">
+        <p>捨てる予定のゲーム機・コントローラー・スマホ・PCを、無料でお譲りいただける方を募集しています。</p>
+        <p>送料は送っていただく方のご負担となります（元払い）。返送はありません。バッテリーが膨らんでいるものは、発火の危険があるため送らないでください。</p>
+        <p>送信すると、この画面に送付先が表示されます。</p>
+      </div>
+    </div>
+
+    <form class="f" id="f" novalidate data-action="https://docs.google.com/forms/d/e/1FAIpQLSf5bgNAjA2wbYbj1xLtYYjnXMSlMHzYJu5FHj8GUbL537ohwA/formResponse" data-map='{"name": 1056691963, "email": 165068018, "items": 333829835, "state": 1853962351, "wipe": 264813649, "ship": 2089156231}'>
+      <div class="field" data-name="name">
+        <label for="name">お名前<span class="req">必須</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+        <p class="err">入力してください</p>
+      </div>
+      <div class="field" data-name="email">
+        <label for="email">ご連絡先メールアドレス<span class="req">必須</span></label>
+        <p class="help">受け取りのご連絡に使います。</p>
+        <input type="email" id="email" name="email" required autocomplete="email">
+        <p class="err">正しいメールアドレスを入力してください</p>
+      </div>
+      <div class="field" data-name="items">
+        <label for="items">機種・台数<span class="req">必須</span></label>
+        <input type="text" id="items" name="items" required placeholder="例：Switch本体 1台、iPhone 8 1台、ノートPC 1台">
+        <p class="err">入力してください</p>
+      </div>
+      <div class="field" data-name="state">
+        <label for="state">状態<span class="req">必須</span></label>
+        <p class="help">動く／動かない、壊れている箇所、付属品の有無など、わかる範囲で書いてください。</p>
+        <textarea id="state" name="state" required></textarea>
+        <p class="err">入力してください</p>
+      </div>
+      <div class="field" data-name="wipe" data-kind="checkbox" data-required="1">
+        <span class="lbl">初期化・アカウント解除の確認<span class="req">必須</span></span>
+        <p class="help">ニンテンドーアカウント、Apple ID・「iPhoneを探す」、Googleアカウント、Microsoftアカウントなどの連携を解除してください。</p>
+        <div class="choices">
+          <label><input type="checkbox" name="wipe" value="初期化（データ消去）とアカウントの連携解除をしました（またはこれから送る前に行います）"> <span>初期化（データ消去）とアカウントの連携解除をしました（またはこれから送る前に行います）</span></label>
+        </div>
+        <p class="err">確認のチェックが必要です</p>
+      </div>
+      <div class="field" data-name="ship" data-kind="checkbox" data-required="1">
+        <span class="lbl">送料のご負担について<span class="req">必須</span></span>
+        <div class="choices">
+          <label><input type="checkbox" name="ship" value="送料は送る側の負担であることを確認しました"> <span>送料は送る側の負担であることを確認しました</span></label>
+        </div>
+        <p class="err">確認のチェックが必要です</p>
+      </div>
+      <div>
+        <button type="submit" class="btn primary">送信する</button>
+        <div class="sendfail" id="sendfail">送信できませんでした。通信状況をご確認のうえ、もう一度お試しください。うまくいかない場合は repair@shtoa-36.com までご連絡ください。</div>
+      </div>
+    </form>
+
+    <div class="done" id="done">
+      <h1>ありがとうございます。</h1>
+      <p class="lead">下記いずれかの送付先に、お品物をお送りください（郵便局留め・ヤマト運輸営業所止め、どちらでもお選びいただけます）。</p>
+      <div class="addr">
+        <h3>【郵便局留めの場合】</h3>
+        <p>〒818-8799<br>福岡県筑紫野市二日市南2丁目13-15<br>筑紫野郵便局 留<br>S-ARAKAWA 様<br>電話：080-9015-0978</p>
+      </div>
+      <div class="addr">
+        <h3>【ヤマト運輸営業所止めの場合】</h3>
+        <p>〒818-0042<br>福岡県筑紫野市立明寺481-3<br>ヤマト運輸 筑紫野営業所 止め<br>S-ARAKAWA 様<br>電話：080-9015-0978</p>
+      </div>
+      <p>※発送後、ご連絡は不要です。お品物が届き次第、ご入力いただいたメールアドレスにご連絡いたします。</p>
+      <p>※この画面を閉じると送付先が見えなくなります。スクリーンショットなどで控えておいてください。</p>
+      <p><a class="btn" href="./">トップページに戻る</a></p>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>事業者情報</strong>
+    <table>
+      <tr><th>屋号</th><td>SHTOA（サービス名：ジーヤンク）</td></tr>
+      <tr><th>運営責任者・所在地・電話番号</th><td>ご請求があれば遅滞なく開示します</td></tr>
+      <tr><th>メール</th><td>repair@shtoa-36.com</td></tr>
+      <tr><th>古物商許可</th><td>申請中（許可取得後、公安委員会名・許可番号をここに掲載します）</td></tr>
+    </table>
+    <p><a href="tokushoho.html">特定商取引法に基づく表記</a></p>
+    <p>&copy; 2026 ジーヤンク（SHTOA）</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('f');
+  var ACTION = form.getAttribute('data-action');
+  var MAP = JSON.parse(form.getAttribute('data-map'));
+  function fieldOk(div){
+    var name = div.getAttribute('data-name');
+    var kind = div.getAttribute('data-kind');
+    var ok = true;
+    if (kind === 'radio' || kind === 'checkbox'){
+      if (div.getAttribute('data-required') === '1'){
+        ok = !!form.querySelector('input[name="'+name+'"]:checked');
+      }
+    } else {
+      var el = form.elements[name];
+      if (el.required && !el.value.trim()) ok = false;
+      if (ok && el.type === 'email' && el.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim())) ok = false;
+    }
+    div.classList.toggle('bad', !ok);
+    return ok;
+  }
+  form.addEventListener('change', function(e){
+    var d = e.target.closest('.field'); if (d && d.classList.contains('bad')) fieldOk(d);
+  });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var fields = form.querySelectorAll('.field');
+    var first = null;
+    fields.forEach(function(d){ if (!fieldOk(d) && !first) first = d; });
+    if (first){ first.scrollIntoView({behavior:'smooth', block:'center'}); return; }
+    var body = new URLSearchParams();
+    Object.keys(MAP).forEach(function(name){
+      var entry = 'entry.' + MAP[name];
+      var els = form.querySelectorAll('[name="'+name+'"]');
+      els.forEach(function(el){
+        if (el.type === 'radio' || el.type === 'checkbox'){ if (el.checked) body.append(entry, el.value); }
+        else if (el.value.trim()) body.append(entry, el.value.trim());
+      });
+    });
+    body.append('fvv','1'); body.append('pageHistory','0');
+    var btn = form.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = '送信中…';
+    fetch(ACTION, {method:'POST', mode:'no-cors', body: body}).then(function(){
+      form.style.display = 'none';
+      document.getElementById('intro').style.display = 'none';
+      var done = document.getElementById('done');
+      done.classList.add('show');
+      window.scrollTo({top:0, behavior:'smooth'});
+    }).catch(function(){
+      btn.disabled = false; btn.textContent = '送信する';
+      document.getElementById('sendfail').classList.add('show');
+    });
+  });
+})();
+</script>
+</body>
+</html>
