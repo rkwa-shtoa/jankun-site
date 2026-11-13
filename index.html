@@ -3,12 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ジーヤンク | Joy-Con修理・ゲーム機の買取販売</title>
-<meta name="description" content="Nintendo Switch Joy-Conのスティック交換・ボタン修理を郵送で承ります。スティック交換 片側2,000円〜。直したゲーム機の販売も準備中です。">
-<meta property="og:title" content="ジーヤンク | Joy-Con修理・ゲーム機の買取販売">
-<meta property="og:description" content="Joy-Conのドリフト修理を郵送で。スティック交換 片側2,000円〜、保証30日。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://repair.shtoa-36.com/">
+<title>ジーヤンク | 修理代行の受付終了のお知らせ</title>
+<meta name="description" content="ジーヤンク（SHTOA）の郵送修理代行は、受付を終了しました。">
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#20252B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -203,257 +200,31 @@ footer .links a{display:block;text-align:right}
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#">ジーヤンク</a>
-    <nav aria-label="ページ内">
-      <a href="#price">料金</a>
-      <a href="#flow">ご依頼の流れ</a>
-      <a href="#donate">譲ってください</a>
-      <a href="#sale">販売</a>
-      <a href="#faq">よくある質問</a>
-    </nav>
-    <a class="cta-s" href="repair-form.html">修理を依頼する</a>
+    <a class="logo" href="./">ジーヤンク</a>
   </div>
 </header>
 
 <main>
 <div class="hero">
-  <div class="wrap">
-    <div>
-      <h1>勝手に動く<span class="nw">Joy-Con</span>、<br><span class="price-tag">2,000円</span>で直します。</h1>
-      <p class="lead">Nintendo Switch Joy-Conのスティックドリフト・ボタン反応不良や、Switch本体のバッテリー交換を、郵送で承ります。YouTubeチャンネル「ジーヤンク」で修理の様子も発信している、個人の修理代行です。</p>
-      <div class="btns">
-        <a class="btn primary" href="repair-form.html">修理を依頼する</a>
-        <a class="btn" href="#price">料金を見る</a>
-      </div>
-      <ul class="facts">
-        <li>全国郵送対応</li>
-        <li>納期 中3〜5日</li>
-        <li>30日間の再発保証</li>
-        <li>修理不可なら診断料500円のみ</li>
-      </ul>
-    </div>
-
-    <div class="meter" id="meter">
-      <div class="meter-head">
-        <h2>スティックの入力</h2>
-        <span class="state" id="state" aria-live="polite">ドリフト中</span>
-      </div>
-      <div class="pad" id="pad" aria-hidden="true">
-        <svg viewBox="-100 -100 200 200">
-          <circle class="ring" r="88"/>
-          <circle class="ring" r="44"/>
-          <line class="axis" x1="-92" y1="0" x2="92" y2="0"/>
-          <line class="axis" x1="0" y1="-92" x2="0" y2="92"/>
-          <circle class="dead" r="10"/>
-          <polyline class="trail" id="trail" points=""/>
-          <circle class="dot" id="dot" r="7" cx="0" cy="0"/>
-        </svg>
-      </div>
-      <div class="readout">
-        <div><span>X</span><b id="vx">+0.00</b></div>
-        <div><span>Y</span><b id="vy">+0.00</b></div>
-      </div>
-      <p class="note" id="note">指を離しているのに、入力が中心に戻りません。これがスティックドリフトです。</p>
-      <button type="button" id="fix" aria-pressed="false">交換するとどうなるか見る</button>
+  <div class="wrap" style="display:block">
+    <h1>修理代行の受付は<br>終了しました。</h1>
+    <p class="lead">ジーヤンクの郵送修理代行（Joy-Conのスティック交換・ボタン修理、Switch本体のバッテリー交換など）と、壊れたゲーム機の譲り受けの募集は、2026年11月13日をもって受付を終了しました。これまでご覧いただき、ありがとうございました。</p>
+    <p class="lead">受付終了前にご依頼いただいた修理の保証や、その他のお問い合わせは、メールで承ります。</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:repair@shtoa-36.com?subject=%E3%80%90%E3%82%B8%E3%83%BC%E3%83%A4%E3%83%B3%E3%82%AF%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">メールで問い合わせる</a>
     </div>
   </div>
 </div>
 
-<section id="price">
-  <div class="wrap">
-    <h2>修理料金</h2>
-    <p class="sub">表示はすべて税込・部品代込みです。往復の送料は別途ご負担ください。</p>
-    <div class="parts">
-      <div class="row">
-        <h3>スティック交換（片側）</h3>
-        <div class="yen">2,000<small>円</small></div>
-        <p class="note">L または R のドリフト修理</p>
-      </div>
-      <div class="row pick">
-        <h3>スティック交換（L+R）<span class="tape">両側セット</span></h3>
-        <div class="yen">3,500<small>円</small></div>
-        <p class="note">片側ずつより500円お得です</p>
-      </div>
-      <div class="row">
-        <h3>ボタン反応不良の修理</h3>
-        <div class="yen">1,500<small>円〜</small></div>
-        <p class="note">症状により変わります。診断のうえお見積りします</p>
-      </div>
-      <div class="row">
-        <h3>Switch本体 バッテリー交換</h3>
-        <div class="yen">6,000<small>円</small></div>
-        <p class="note">減りが早い・膨らみが心配な方に。PSEマーク付き部品を使用します</p>
-      </div>
-      <div class="row">
-        <h3>診断のみ</h3>
-        <div class="yen">500<small>円</small></div>
-        <p class="note">修理を依頼された場合は、代金に充当します</p>
-      </div>
-    </div>
-    <dl class="terms">
-      <div><dt>納期の目安</dt><dd>到着から中3〜5日</dd></div>
-      <div><dt>保証</dt><dd>返送日から30日（同じ箇所の再発）</dd></div>
-      <div><dt>お支払い</dt><dd>先払い（クレジットカード・Apple Pay・Google Pay）</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section id="flow">
-  <div class="wrap">
-    <h2>ご依頼の流れ</h2>
-    <p class="sub">修理依頼フォームに登録するだけで、送付先がその場でわかります。発送から返送まで、すべて郵送とメッセージで完結します。</p>
-    <ol class="flow">
-      <li><div><h3>フォームに登録</h3><p><a href="repair-form.html">修理依頼フォーム</a>で、機種・症状などを入力して送信します。症状が分かる動画や写真があれば、送信後にrepair@shtoa-36.comへ送っていただくと、より正確に診断できます。</p></div></li>
-      <li><div><h3>そのまま発送</h3><p>送信後の画面に、送付先（郵便局留め／ヤマト運輸営業所止め）がすぐ表示されます。追跡番号・補償付きの方法（ゆうパック、レターパックプラス等）をおすすめします。発送前に外装の写真を撮っておいてください。</p></div></li>
-      <li><div><h3>診断・お見積り</h3><p>到着後に診断し、修理内容と料金をメールでご案内します。お支払い用リンク（クレジットカード・Apple Pay・Google Pay対応）からのご入金を確認してから作業に入ります。</p></div></li>
-      <li><div><h3>修理・返送</h3><p>動作確認のうえ、原則ヤマト運輸の匿名配送（追跡番号付き）で返送します。お届け先は、メールでお送りするリンクからご入力いただきます。この方法が使えない場合は、別途メールでご住所をお伺いすることがあります。返送日から30日間の保証付きです。</p></div></li>
-    </ol>
-  </div>
-</section>
-
-<section id="scope">
-  <div class="wrap">
-    <h2>対応できること</h2>
-    <p class="sub">確実に直せる範囲に絞って承っています。</p>
-    <div class="cols">
-      <div class="panel">
-        <h3>対応しています</h3>
-        <ul class="marks yes">
-          <li>Joy-Conのスティックドリフト（勝手に動く）</li>
-          <li>Joy-Conのボタン反応不良</li>
-          <li>Switch本体のバッテリー交換</li>
-          <li>その他の機種・症状も、まずはご相談ください</li>
-        </ul>
-      </div>
-      <div class="panel">
-        <h3>対応していません</h3>
-        <ul class="marks no">
-          <li>基板の修理・電源IC関連の故障</li>
-          <li>水没品</li>
-          <li>データ移行・データ復旧</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="donate">
-  <div class="wrap">
-    <h2>壊れたゲーム機・スマホ・PC、譲ってください</h2>
-    <p class="sub">捨てる予定のゲーム機・コントローラー・スマホ・PCを、無料でお譲りいただける方を募集しています。修理の練習や、YouTubeでの修理動画に使わせていただきます。</p>
-    <div class="cols">
-      <div class="panel">
-        <h3>どんな状態でも大丈夫です</h3>
-        <ul class="marks yes">
-          <li>電源が入らない・画面が映らない</li>
-          <li>水没・割れ・部品の欠品</li>
-          <li>スティックが勝手に動くJoy-Con</li>
-          <li>ゲーム機本体、コントローラー、携帯ゲーム機など</li>
-          <li>スマホ・タブレット、ノートPC・デスクトップPC</li>
-        </ul>
-        <div class="panel-cta"><a class="btn primary" href="donate-form.html">譲り受けフォームへ</a></div>
-      </div>
-      <div class="panel">
-        <h3>お送りいただく前に</h3>
-        <ul class="marks plain">
-          <li><a href="donate-form.html">譲り受けフォーム</a>にご登録ください。送信後の画面に送付先（郵便局留め／ヤマト運輸営業所止め）がすぐ表示されます</li>
-          <li>お一人様<strong>3台まで</strong>とさせていただいております</li>
-          <li>送料はご負担いただく形（元払い）でお願いしています</li>
-          <li>お送りいただく前に、必ず初期化（データ消去）をしてください</li>
-          <li>アカウントの連携を解除してください（ニンテンドーアカウント、Apple ID・「iPhoneを探す」、Googleアカウント、Microsoftアカウントなど）</li>
-          <li>万が一データが残っていた場合も、中身を見たり使ったりせず、当方で消去します</li>
-          <li>バッテリーが膨らんでいるものは、発火の危険があるため送らないでください</li>
-          <li>お譲りいただいた品は返却・お支払いができません（無償でのお引き取りです）</li>
-          <li>未成年の方は、保護者の方の同意を得てからご連絡ください</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="sale">
   <div class="wrap">
-    <h2>直したゲーム機の販売</h2>
-    <p class="sub">壊れたゲーム機を直して、次の方へお届けします。</p>
+    <h2>中古品の販売について</h2>
     <div class="sale">
       <div>
-        <p>直したNintendo Switch本体・Joy-Conなどは、ヤフオクで販売します（販売準備中）。出品を始めたら、このページとYouTubeチャンネル「ジーヤンク」・Xでお知らせします。</p>
-        <p>「動かなくなったJoy-Conを手放したい」などのご相談は、メールでお寄せください（現時点では買取のお約束はできません）。</p>
+        <p>古物商として、中古品の販売は引き続き行っています。</p>
         <span class="license">古物商許可　福岡県公安委員会 第901132610061号</span>
       </div>
       <a class="btn" href="https://auctions.yahoo.co.jp/seller/vqwqo65392" target="_blank" rel="noopener">ヤフオクの出品ページ</a>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap">
-    <h2>よくある質問</h2>
-    <div class="faq">
-      <details><summary>メーカー保証はどうなりますか？</summary><p>当店で分解・修理した時点で、任天堂のメーカー保証は受けられなくなります。保証期間内の場合は、先にメーカー修理をご検討ください。</p></details>
-      <details><summary>修理できなかった場合の費用は？</summary><p>診断料500円のみのご請求です。その場合の返送料はご依頼者様のご負担となります。</p></details>
-      <details><summary>直したところがまた壊れたら？</summary><p>返送日から30日以内に同じ箇所が再発した場合は、無償で再修理します。</p></details>
-      <details><summary>Switch本体ごと送ってもいいですか？</summary><p>可能ですが、セーブデータやアカウントに関するトラブルは責任を負いかねます。必要なデータのバックアップをお願いします。Joy-Conのみの修理であれば、本体を送る必要はありません。</p></details>
-      <details><summary>住所や名前は相手に伝わりますか？</summary><p>当店からの返送は原則ヤマト運輸の匿名配送を使うため、お客様と当店の住所・お名前はお互いの伝票に表示されません。万が一匿名配送がご利用いただけない場合は、別途メールでご住所をお伺いすることがあります。お預かりしたご住所は、返送以外の目的には使用しません。</p></details>
-      <details><summary>未成年でも依頼できますか？</summary><p>保護者様のご同意のうえ、保護者様のお名前でお申し込みください。ゲーム機を譲っていただく場合も同様です。</p></details>
-      <details><summary>バッテリー入りの本体を送っても大丈夫ですか？</summary><p>本体に入った状態であれば、ゆうパックなどで送れる場合が多いです。発送前に配送会社の条件をご確認ください。膨らんだバッテリーは送らないでください。</p></details>
-      <details><summary>修理の様子は動画になりますか？</summary><p>ご同意いただいた場合のみ、YouTubeチャンネル「ジーヤンク」で修理の様子を紹介することがあります。個人が特定される表示にはモザイク等の配慮をします。同意しない場合も修理は通常どおり承ります。</p></details>
-    </div>
-  </div>
-</section>
-
-<section id="disclaimer">
-  <div class="wrap">
-    <h2>免責事項</h2>
-    <p class="sub">お申し込みの前に必ずご確認ください。</p>
-    <div class="disc">
-      <div>
-        <h3>基本方針</h3>
-        <ul><li>本サービスは個人による修理代行です。分解によりメーカー保証は失われます。</li></ul>
-      </div>
-      <div>
-        <h3>配送について</h3>
-        <ul>
-          <li>配送中の破損・紛失は運送会社の補償範囲内での対応となり、当方では責任を負いかねます。</li>
-          <li>追跡番号・補償付きの配送方法をおすすめします。</li>
-        </ul>
-      </div>
-      <div>
-        <h3>お支払いについて</h3>
-        <ul>
-          <li>診断・修理内容の確定後、作業前にお支払い用リンクから代金をお支払いいただきます（先払い制）。</li>
-          <li>修理不可と判明した時点でキャンセルできます。その場合の返送料はご依頼者様のご負担です。</li>
-        </ul>
-      </div>
-      <div>
-        <h3>その他</h3>
-        <ul>
-          <li>分解後に別の不具合が見つかった場合は、ご連絡のうえ追加対応の可否・料金をご相談します。</li>
-          <li>経年劣化により、作業中に部品が破損する可能性がわずかにあります。その場合は事前にご連絡し、可能な範囲で代替対応をご案内します。</li>
-          <li>お預かり品は写真記録を行ったうえで作業します。</li>
-          <li>バッテリー交換には、PSEマーク付きの交換部品を使用します。</li>
-          <li>保証期間中の再発以外の返金・補償には応じられません。</li>
-          <li>お預かりした個人情報は、本サービスの連絡目的以外には使用しません。</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div class="box">
-      <h2>お問い合わせ</h2>
-      <p class="sub">修理のご依頼・ゲーム機の譲り受けは、フォームからご登録ください。フォーム以外のご質問はメールで受け付けています。通常24時間以内にお返事します。</p>
-      <div class="btns">
-        <a class="btn primary" href="repair-form.html">修理依頼フォームへ</a>
-        <a class="btn" href="donate-form.html">譲り受けフォームへ</a>
-      </div>
-      <div class="btns">
-        <a class="btn" href="mailto:repair@shtoa-36.com?subject=%E3%80%90%E3%82%B8%E3%83%BC%E3%83%A4%E3%83%B3%E3%82%AF%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&body=%E2%96%A0%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0A">メールで質問する</a>
-        <a class="btn" href="https://www.youtube.com/channel/UCWPh0FdewOVN1z-IXKxSKiQ" target="_blank" rel="noopener">YouTube「ジーヤンク」</a>
-      </div>
-      <p class="small">フォーム以外の一般的なご質問は、メールでお気軽にどうぞ。</p>
     </div>
   </div>
 </section>
@@ -473,69 +244,5 @@ footer .links a{display:block;text-align:right}
     </div>
   </div>
 </footer>
-
-<script>
-(function(){
-  var meter=document.getElementById('meter'),dot=document.getElementById('dot'),trail=document.getElementById('trail'),
-      vx=document.getElementById('vx'),vy=document.getElementById('vy'),note=document.getElementById('note'),
-      state=document.getElementById('state'),btn=document.getElementById('fix');
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var fixed=false,t=0,pts=[],x=0,y=0,held=false,tx=0,ty=0,pad=document.getElementById('pad');
-  function fmt(v){var s=(v>=0?'+':'−')+Math.abs(v).toFixed(2);return s;}
-  function draw(px,py){
-    dot.setAttribute('cx',px.toFixed(1));dot.setAttribute('cy',py.toFixed(1));
-    vx.textContent=fmt(px/88);vy.textContent=fmt(-py/88);
-  }
-  function drift(){
-    // ゆっくり、ふらふらと中心からずれていく
-    return [Math.sin(t*0.9)*22+Math.sin(t*2.3)*9+16, Math.cos(t*0.7)*18+Math.sin(t*1.7)*7-12];
-  }
-  function frame(){
-    if(!fixed){
-      t+=0.016;var p=drift();x=p[0];y=p[1];
-      pts.push(x.toFixed(1)+','+y.toFixed(1));if(pts.length>70)pts.shift();
-      trail.setAttribute('points',pts.join(' '));
-    }else if(held){
-      x+=(tx-x)*0.5;y+=(ty-y)*0.5;
-    }else{
-      x*=0.82;y*=0.82;
-    }
-    draw(x,y);
-    requestAnimationFrame(frame);
-  }
-  if(reduce){var p0=[26,-18];x=p0[0];y=p0[1];draw(x,y);}else{requestAnimationFrame(frame);}
-
-  function toLocal(e){
-    var r=pad.getBoundingClientRect();
-    var px=(e.clientX-r.left)/r.width*200-100,py=(e.clientY-r.top)/r.height*200-100;
-    var d=Math.sqrt(px*px+py*py);if(d>88){px=px/d*88;py=py/d*88;}
-    return [px,py];
-  }
-  function move(e){if(!fixed)return;var p=toLocal(e);tx=p[0];ty=p[1];if(!held){held=true;pad.classList.add('held');}if(reduce){x=tx;y=ty;draw(x,y);}}
-  function release(){held=false;pad.classList.remove('held');if(reduce){x=0;y=0;draw(0,0);}}
-  pad.addEventListener('pointermove',function(e){if(e.pointerType==='mouse'||e.buttons)move(e);});
-  pad.addEventListener('pointerdown',function(e){if(!fixed)return;pad.setPointerCapture(e.pointerId);move(e);});
-  pad.addEventListener('pointerup',release);
-  pad.addEventListener('pointercancel',release);
-  pad.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse')release();});
-  btn.addEventListener('click',function(){
-    fixed=!fixed;
-    meter.classList.toggle('fixed',fixed);
-    btn.setAttribute('aria-pressed',fixed?'true':'false');
-    if(fixed){
-      state.textContent='交換後';
-      note.textContent='交換後は、思ったとおりに動いて、離すと中心（点線の中）で止まります。円の上にカーソルを乗せるか、指でなぞって試してください。';
-      btn.textContent='交換前に戻す';
-      pts=[];trail.setAttribute('points','');
-      if(reduce){x=0;y=0;draw(0,0);}
-    }else{
-      state.textContent='ドリフト中';held=false;pad.classList.remove('held');
-      note.textContent='指を離しているのに、入力が中心に戻りません。これがスティックドリフトです。';
-      btn.textContent='交換するとどうなるか見る';
-      if(reduce){x=26;y=-18;draw(x,y);}
-    }
-  });
-})();
-</script>
 </body>
 </html>
